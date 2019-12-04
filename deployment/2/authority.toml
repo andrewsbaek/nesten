@@ -1,0 +1,30 @@
+[parity]
+chain = "/home/parity/chain.json"
+
+[account]
+password = ["/home/parity/password"]
+
+[network]
+reserved_peers = "/home/parity/reserved_peers"
+
+[rpc]
+interface = "0.0.0.0"
+cors = ["all"]
+hosts = ["all"]
+apis = ["web3", "eth", "net", "parity", "traces", "rpc", "personal", "parity_accounts", "signer", "parity_set"]
+
+[mining]
+reseal_on_txs = "all"
+engine_signer = "0x311f51e029a1525b8e0f76d8dd9edaf82be818ad"
+usd_per_tx = "0" 
+force_sealing = false
+reseal_min_period = 5000
+reseal_max_period = 300000
+
+[websockets]
+disable = false
+port = 8546
+interface = "all"
+origins = ["http://127.0.0.1:8180"]
+apis = ["web3", "eth", "net", "parity", "traces", "rpc", "secretstore"]
+hosts = ["all"]
